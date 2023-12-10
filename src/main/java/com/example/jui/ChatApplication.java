@@ -16,7 +16,6 @@ public class ChatApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Chat Client - 22028327 - Manh Cuong Nguyen");
         //stage.initStyle(StageStyle.UNIFIED);
-        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         stage.setMinWidth(400); stage.setMinHeight(600);
         stage.setScene(scene);
         stage.show();
