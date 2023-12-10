@@ -15,7 +15,7 @@ public class ChatApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(ChatApplication.class.getResource("chat-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Chat Client - 22028327 - Manh Cuong Nguyen");
-        //stage.initStyle(StageStyle.UNIFIED);
+        stage.initStyle(StageStyle.DECORATED);
         stage.setMinWidth(400); stage.setMinHeight(600);
         stage.setScene(scene);
         stage.show();

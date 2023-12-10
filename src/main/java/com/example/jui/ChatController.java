@@ -44,6 +44,11 @@ public class ChatController implements Initializable {
         send2.setOnAction(event -> {
             addLabel(textArea2, TextAlignment.RIGHT, Pos.CENTER_RIGHT);
         });
+
+        send1.setStyle(Styles.BUTTON_STYLE);
+        send2.setStyle(Styles.BUTTON_STYLE);
+        textArea1.setStyle(Styles.TEXTAREA_STYLE);
+        textArea2.setStyle(Styles.TEXTAREA_STYLE);
     }
 
     private void addLabel(TextArea textArea, TextAlignment textAlignment, Pos pos) {
@@ -54,10 +59,11 @@ public class ChatController implements Initializable {
         label.fontProperty().bind(send1.fontProperty());
         label.setTextAlignment(textAlignment);
         label.setAlignment(pos);
+        label.setStyle(Styles.LABEL_STYLE);
         VBox.setMargin(label, new Insets(10, 10, 10, 10));
-        label.maxWidthProperty().bind(myVBox.widthProperty());
-        label.maxHeightProperty().bind(myVBox.heightProperty());
-        label.prefWidthProperty().bind(myVBox.prefWidthProperty());
-        myVBox.getChildren().add(label);
+        VBox vBox = new VBox();
+        vBox.setAlignment(pos);
+        vBox.getChildren().add(label);
+        myVBox.getChildren().add(vBox);
     }
 }
